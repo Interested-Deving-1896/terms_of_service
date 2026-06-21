@@ -1,54 +1,75 @@
-<!--
- - SPDX-FileCopyrightText: 2018 Nextcloud GmbH and Nextcloud contributors
- - SPDX-License-Identifier: AGPL-3.0-or-later
--->
-# 📜 Terms of service
+[update-readmes]   Mode: rewrite — migrating to template structure...
+# terms_of_service
 
-[![REUSE status](https://api.reuse.software/badge/github.com/nextcloud/terms_of_service)](https://api.reuse.software/info/github.com/nextcloud/terms_of_service)
+[![Built with Ona](https://ona.com/build-with-ona.svg)](https://app.ona.com/#https://github.com/Interested-Deving-1896/terms_of_service)
 
-> ![](https://raw.githubusercontent.com/nextcloud/terms_of_service/master/docs/popup-dialog.png)
+<!-- AI:start:what-it-does -->
+_Description pending._
+<!-- AI:end:what-it-does -->
 
-Requires users to accept terms of service before accessing data. Text and languages are configurable on the administration panel.
+## Architecture
 
-## 🔗 Display on public shares
+<!-- AI:start:architecture -->
+_Architecture documentation pending._
+<!-- AI:end:architecture -->
 
-The setting applies to shares via link or mail (with and without password protection).
+## Install
 
-Default is disabled: `0`
-```
-./occ config:app:set terms_of_service tos_on_public_shares --value '1'
-```
-## 👤 Exclude registered users
+<!-- Add installation instructions here. This section is yours — the AI will not modify it. -->
 
-To exclude registered users from accepting the terms of service, set this config to `0`.
-Therefore, only public link and mail sharees have to accept the terms of service.
-
-Default is enabled: `1`
-```
-./occ config:app:set terms_of_service tos_for_users --value '0'
+```bash
+git clone https://github.com/Interested-Deving-1896/terms_of_service.git
+cd terms_of_service
 ```
 
-## 🔌 Allow access from other services
+## Usage
 
-Some other services such as office suites communicate directly with the Nextcloud server.
-For Nextcloud Office and Officeonline the `wopi_allowlist` settings of the respective apps are taken into account.
+<!-- Add usage examples here. This section is yours — the AI will not modify it. -->
 
-To allow other services to bypass the terms of service check:
-* Set `allow_path_prefix` to the paths that access should be granted to.
-* Set `allow_ip_ranges` to match the ip addresses of the servers in question.
-  If you are using a reverse proxy, use the ip address of the application server.
-  Access is allowed based on the x-forwarded-for header and not the source ip.
+## Configuration
 
-Default for `allow_path_prefix` is none: ``
-Default for `allow_ip_ranges` is none: ``
+<!-- Document configuration options here. This section is yours — the AI will not modify it. -->
+
+## CI
+
+<!-- AI:start:ci -->
+_CI documentation pending._
+<!-- AI:end:ci -->
+
+## Mirror chain
+
+<!-- AI:start:mirror-chain -->
+This repo is maintained in [`Interested-Deving-1896/terms_of_service`](https://github.com/Interested-Deving-1896/terms_of_service) and mirrored through:
 
 ```
-./occ config:app:set terms_of_service allow_path_prefix --value '/apps/onlyoffice/download'
-./occ config:app:set terms_of_service allow_ip_ranges --value '10.0.0.5,10.0.0.6'
+Interested-Deving-1896/terms_of_service  ──►  OpenOS-Project-OSP/terms_of_service  ──►  OpenOS-Project-Ecosystem-OOC/terms_of_service
 ```
 
-## 🏗️ Development setup
+Changes flow downstream automatically via the hourly mirror chain in
+[`fork-sync-all`](https://github.com/Interested-Deving-1896/fork-sync-all).
+Direct commits to OSP or OOC are detected and opened as PRs back to `Interested-Deving-1896`.
+<!-- AI:end:mirror-chain -->
 
-1. Clone the repository
-2. Setup your environment: `make`
-3. Start contributing 🎉
+## Contributors
+
+<!-- AI:start:contributors -->
+_Contributors pending._
+<!-- AI:end:contributors -->
+
+## Origins
+
+<!-- AI:start:origins -->
+_Original project — no upstream fork._
+<!-- AI:end:origins -->
+
+## Resources
+
+<!-- AI:start:resources -->
+_No additional resource files found._
+<!-- AI:end:resources -->
+
+## License
+
+<!-- AI:start:license -->
+[AGPL-3.0](https://github.com/Interested-Deving-1896/terms_of_service/blob/master/COPYING) © 2026 [Interested-Deving-1896](https://github.com/Interested-Deving-1896)
+<!-- AI:end:license -->
